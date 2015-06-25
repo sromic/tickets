@@ -1,0 +1,35 @@
+@()
+
+    @main("Tickets Overlords") {
+        <script type="application/javascript">
+        $ ( document ).ready ( function ( ) {
+        var ticketAvail = jsRoutes.controllers.Tickets.ticketsAvailable ( ) ;
+
+        ticketAvail.ajax ( {
+        success : function ( result ) {
+        var qty = result.ticketQuantity ;
+
+        var areViIs = 'are ' ;
+        var plural = 's' ;
+        if ( qty === 1 ) {
+        areViIs = 'is ' ;
+        plural = '' ;
+        }
+
+        var display = 'There ' + areViIs + qty + ' ticket' + plural + ' available!' ;
+
+        $ ( "#ticketsAvailable" ).text ( display ) ;
+        },
+        failure : function ( err ) {
+        var errorText = 'There was an error' ;
+        $ ( "#ticketsAvailable" ).text ( errorText ) ;
+        }
+        } ) ;
+
+        } ) ;
+        </script>
+
+        You want to go see a show?
+        <span id="ticketsAvailable"></span>
+
+    }

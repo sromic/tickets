@@ -1,0 +1,7 @@
+06-25 17:43:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "EVENTS" not found; SQL statement:
+INSERT INTO events
+(name, start, end, address, city, state, country)
+VALUES
+  ('Kojella', '2014-04-17 8:00:00-07:00', '2014-04-19 23:00:00-07:00',
+   '123 Paper St.', 'Palm Desert', 'CA', 'US') [42102-176]
