@@ -26,13 +26,13 @@ CREATE TABLE ticket_blocks (
 INSERT INTO events
 (name, start, end, address, city, state, country)
 VALUES
-  ('Kojella2', '2014-04-17 8:00:00-07:00', '2014-04-19 23:00:00-07:00',
+  ('Kojella1', '2014-04-17 8:00:00-07:00', '2014-04-19 23:00:00-07:00',
+   '124 Paper St.', 'Palm Desert', 'CA', 'US'),
+  ('Kojella2', '2014-04-20 8:00:00-07:00', '2014-04-22 23:00:00-07:00',
    '124 Paper St.', 'Palm Desert', 'CA', 'US');
 
-INSERT INTO events
-(name, start, end, address, city, state, country)
-VALUES
-  ('Kojella', '2014-04-17 8:00:00-07:00', '2014-04')
+INSERT INTO ticket_blocks (event_id, name, product_code, price, initial_size, sale_start, sale_end)
+VALUES (1, 'General Admission', 'GA0001', 375.00, 1000, '2014-04-20 8:00:00-07:00', '2014-04-22 23:00:00-07:00');
 
 # --- !Downs
 
